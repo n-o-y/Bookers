@@ -1,1 +1,23 @@
-<h1>index</h1>
+<h2>Books</h2>
+
+<% @books.each do |book| %>
+  <p>
+    <%= book.title %>
+    <%= book.body %>
+    <%= link_to "Show", show_book_path(book.id) %>
+    <%= link_to "Edit", edit_book_path(book.id) %>
+    <%= link_to 'Destroy', destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %>
+  </p>
+<% end %>
+
+<h2>New book</h2>
+<%= form_with model:@hon, url:'/books', local:true do |f| %>
+  <h4>title</h4>
+  <%= f.text_field :title%>
+  <h4>body</h4>
+  <%= f.text_area :body %>
+  <p>
+    <%= f.submit 'Create Book' %>
+  </p>
+<% end %>
+
