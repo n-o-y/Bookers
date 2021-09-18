@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #333;
+}
+
 body {
   width: 90%;
   margin: 0 auto;
@@ -43,6 +47,7 @@ body {
 
 .table-headings {
   display: flex;
+  font-weight: bold;
 }
 
 .table-heading {
@@ -62,6 +67,7 @@ body {
 }
 
 .record {
+  color: #333;
   display: flex;
 }
 
@@ -75,6 +81,14 @@ body {
 
 .record-link {
   width: 25%;
+}
+
+.record-link a {
+  margin-left: 10px;
+}
+
+.new {
+  margin-top: 20px;
 }
 
 .show-title {

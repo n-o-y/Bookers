@@ -1,4 +1,5 @@
 <body>
+    <%= flash[:success] %>
     <p class="show-title">Title: <%= @book.title %></p>
     <p class="show-body">Body: <%= @book.body %></p>
     <%= link_to 'Edit', edit_book_path(@book.id) %> |
