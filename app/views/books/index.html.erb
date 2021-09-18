@@ -1,21 +1,21 @@
 <body>
   <div class="inidex">
-    
+
     <%= flash[:success] %>
     <h1 class="index-heading">Books</h1>
-    <div class="table">
+    <table>
       <div class="table-headings">
         <p class="table-heading">Title</p>
         <p class="table-heading">Body</p>
         <p class="table-heading"></p>
       </div>
-  
+
       <% @books.each do |book| %>
       <div class="record">
         <p class="record-title"><%= book.title %></p>
         <p class="record-body"><%= book.body %></p>
         <p class="record-link">
-          <%= link_to "Show", show_book_path(book.id) %>
+          <%= link_to "Show", book_path(book.id) %>
           <%= link_to "Edit", edit_book_path(book.id) %>
           <%= link_to 'Destroy', destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %>
         </p>
