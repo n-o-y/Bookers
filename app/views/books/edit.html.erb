@@ -8,7 +8,7 @@
     <% end %>
   <% end %>
 
-  <%= form_with model:@book, url: update_book_path(@book.id), local:true do |f| %>
+  <%= form_with model:@book, url: books_path, local:true do |f| %>
     <p class="edit-title">Title</p>
     <%= f.text_field :title %>
     <p class="edit-body">Body</p>
